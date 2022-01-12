@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
-*
-{margin: 0;
+*{margin: 0;
 padding: 0;
 box-sizing: border-box;
 list-style: none;
@@ -98,6 +97,7 @@ header{
                   opacity: 0;
                   visibility: hidden;
                   transition: all .5s;
+                  z-index:5;
                   a{
                       color: $white;
                       text-decoration: none;
@@ -127,6 +127,36 @@ header{
         }
     }
 }
+.toggle{
+    width:4rem ;
+    height: 4rem;
+    border: 1px solid red;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    span.bars {
+        width: 3rem;
+        height: 3px;
+        background: red;
+        position: relative;
+        &::after,&::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width:3rem;
+            background: red;
+            height: 3px;
+        }
+        &::after{
+            transform:translateY(-1rem);
+        }
+        &::before{
+            transform: translateY(1rem);
+        }
+
+    }
+}
 //nav bar style start
 .header-nav{
     padding: 2rem;
@@ -138,8 +168,12 @@ header{
             font-size: 1.5rem;
             text-transform: uppercase;
             line-height: 5rem;
+        
             li{
                 a.active{
+                    color: $textc;
+                }
+                &:hover>a{
                     color: $textc;
                 }
                 a{
@@ -151,6 +185,62 @@ header{
                     transition: all .5s;
                     &:hover,.active{
                         color: $textc;
+                    }
+                }
+            }
+            .pages{
+                position: relative;
+                &:hover>ul{
+                    top:100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &:hover>ul::after{
+                    width: 100%;
+                }
+                ul{
+                    position: absolute;
+                    width:16rem;
+                    background-color:$ptxtc;
+                    display: initial;
+                    top: 200%;
+                    left: -50%;
+                    border-radius: 4px;
+                    transition: all .6s;
+                    opacity: 0;
+                    visibility: hidden;
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width:0%;
+                        background: red;
+                        height: 3px;
+                        transition-delay: .6s;
+                        transition: all 1.2s;
+                    }
+                    li{
+                        display: block;
+                        a{
+                            font-family: $fontf;
+                            padding:  0 !important;
+                            display: block;
+                            padding:.5rem 0;
+                            text-align: center;
+                            color: $white;
+                            font-weight: 700;
+                            padding: 0 !important;
+                            font-weight: 700;
+                            line-height: 4rem;
+                            transition: all .6s;
+                            &:hover{
+                                background:$white;
+                                border-radius: 1rem 0;
+                                color: $textc;
+                            }
+                        }
                     }
                 }
             }
@@ -191,14 +281,148 @@ header{
 }
 //nav bar style end
 
+//site all deparment area  start
+.alldeparmeant{
+    position: relative;
+    .allitem.open{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    .allitem{
+        position: absolute;
+        top: 4.5rem;
+        width: 100%;
+        left: 0;
+        border: 1px solid rgba(0, 0, 0, 0.376);
+        border-top: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s;
+        transform-origin: top center;
+        transform: scale(0);
+        z-index: 11;
+        background: $white;
+        li{
+            a{
+                text-decoration: none;
+                font-size: 1.8rem;
+                padding: .6rem 0;
+                color: $ptxtc;
+                font-family: $fontf;
+                display: block;
+                padding-left: 2rem;
+            }
+        }
+    }
+    button{
+        width: 100%;
+        background: $textc;
+        color: $white;
+        font-family: $fontf;
+        font-size: 2rem;
+        outline: none;
+        border: none;
+        padding: .8rem 0;
+        i{
+            font-size: 1.8rem;
+            &:last-child{
+                text-align: right;
+                font-size: 1.4rem;
+                position: absolute;
+                top: 40%;
+                right: 10%;
+            }
+        }
+    }
+}
+//site all deparment area  end
 
-
+//search area start
+.search-form{
+    width: 100%;
+    height: 50px;
+    border:1px solid rgba(56, 55, 55, 0.335);
+    border-right: none;
+    input[type=text]{
+        border: none;
+        outline: none;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        width:45% ;
+    }
+    input[type=submit]{
+        outline: none;
+        border: none;
+        font-family: $fontf;
+        color: $white;
+        background: $textc;
+        font-size: 1.7rem;
+        width: 20%;
+        text-transform: uppercase;
+    }
+    .formTxt{
+        height: 100%;
+        width: 35%;
+        line-height: 50px;
+        font-size: 1.6rem;
+        padding-left: 2rem;
+        font-weight: 900;
+        font-family: $fontf;
+        position: relative;
+        &::after{
+            @include afterboder(50%,1px ,25% ,0% ,rgba(0, 0, 0, 0.274) )
+        }
+        i{
+            font-size: 1.4rem;
+           position: absolute;
+           top: 40%;
+           right: 10%;
+        }
+    }
+}
+//search area end
+//phoneIcon style start
+.phoneIcon{
+    display: flex;
+    align-items: center;
+    span{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 0 0 1rem .3rem rgba(0, 0, 0, 0.137);
+        display: grid;
+        place-content: center;
+        color:$textc;
+        font-size: 2rem;
+        margin-right: 2rem;
+    }
+    .number{
+        h4{
+            color: $ptxtc;
+            font-family: $fontf;
+            font-weight: 900;
+            font-size: 1.6rem;
+        }
+        p{
+            color: $ptxtc;
+            font-family: $fontf;
+            font-size: 1.5rem;
+            padding-top: .6rem;
+        }
+    }
+}
+//phoneIcon style end
 @media screen and (min-width:991px){
     .header-nav{
         padding: 2rem;
         .nav{
             display: block;
         }
+    }
+    .toggle{
+        display: none !important;
     }
     
 }
@@ -214,6 +438,7 @@ header{
             flex: 1;
         }
     }
+   
 }
 
 // .kire{

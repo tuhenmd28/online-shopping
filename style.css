@@ -123,6 +123,7 @@ header .menu .flag .country {
   visibility: hidden;
   -webkit-transition: all .5s;
   transition: all .5s;
+  z-index: 5;
 }
 
 header .menu .flag .country a {
@@ -155,6 +156,48 @@ header .menu .login i {
   padding-right: .5rem;
 }
 
+.toggle {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid red;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.toggle span.bars {
+  width: 3rem;
+  height: 3px;
+  background: red;
+  position: relative;
+}
+
+.toggle span.bars::after, .toggle span.bars::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3rem;
+  background: red;
+  height: 3px;
+}
+
+.toggle span.bars::after {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.toggle span.bars::before {
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
 .header-nav {
   padding: 2rem;
 }
@@ -179,6 +222,10 @@ header .menu .login i {
   color: #7FAD39;
 }
 
+.header-nav .nav ul li:hover > a {
+  color: #7FAD39;
+}
+
 .header-nav .nav ul li a {
   padding-right: 5rem;
   text-decoration: none;
@@ -190,6 +237,74 @@ header .menu .login i {
 }
 
 .header-nav .nav ul li a:hover, .header-nav .nav ul li a .active {
+  color: #7FAD39;
+}
+
+.header-nav .nav ul .pages {
+  position: relative;
+}
+
+.header-nav .nav ul .pages:hover > ul {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-nav .nav ul .pages:hover > ul::after {
+  width: 100%;
+}
+
+.header-nav .nav ul .pages ul {
+  position: absolute;
+  width: 16rem;
+  background-color: #252525;
+  display: initial;
+  top: 200%;
+  left: -50%;
+  border-radius: 4px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-nav .nav ul .pages ul::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background: red;
+  height: 3px;
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.header-nav .nav ul .pages ul li {
+  display: block;
+}
+
+.header-nav .nav ul .pages ul li a {
+  font-family: "Cairo", sans-serif;
+  padding: 0 !important;
+  display: block;
+  padding: .5rem 0;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0 !important;
+  font-weight: 700;
+  line-height: 4rem;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.header-nav .nav ul .pages ul li a:hover {
+  background: #FFFFFF;
+  border-radius: 1rem 0;
   color: #7FAD39;
 }
 
@@ -234,12 +349,170 @@ header .menu .login i {
   font-size: 1.8rem;
 }
 
+.alldeparmeant {
+  position: relative;
+}
+
+.alldeparmeant .allitem.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.alldeparmeant .allitem {
+  position: absolute;
+  top: 4.5rem;
+  width: 100%;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.376);
+  border-top: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  z-index: 11;
+  background: #FFFFFF;
+}
+
+.alldeparmeant .allitem li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: .6rem 0;
+  color: #252525;
+  font-family: "Cairo", sans-serif;
+  display: block;
+  padding-left: 2rem;
+}
+
+.alldeparmeant button {
+  width: 100%;
+  background: #7FAD39;
+  color: #FFFFFF;
+  font-family: "Cairo", sans-serif;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  padding: .8rem 0;
+}
+
+.alldeparmeant button i {
+  font-size: 1.8rem;
+}
+
+.alldeparmeant button i:last-child {
+  text-align: right;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+
+.search-form {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(56, 55, 55, 0.335);
+  border-right: none;
+}
+
+.search-form input[type=text] {
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  width: 45%;
+}
+
+.search-form input[type=submit] {
+  outline: none;
+  border: none;
+  font-family: "Cairo", sans-serif;
+  color: #FFFFFF;
+  background: #7FAD39;
+  font-size: 1.7rem;
+  width: 20%;
+  text-transform: uppercase;
+}
+
+.search-form .formTxt {
+  height: 100%;
+  width: 35%;
+  line-height: 50px;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  font-weight: 900;
+  font-family: "Cairo", sans-serif;
+  position: relative;
+}
+
+.search-form .formTxt::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  right: 0%;
+  top: 25%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.274);
+}
+
+.search-form .formTxt i {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+
+.phoneIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phoneIcon span {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.137);
+          box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.137);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  color: #7FAD39;
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.phoneIcon .number h4 {
+  color: #252525;
+  font-family: "Cairo", sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.phoneIcon .number p {
+  color: #252525;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.5rem;
+  padding-top: .6rem;
+}
+
 @media screen and (min-width: 991px) {
   .header-nav {
     padding: 2rem;
   }
   .header-nav .nav {
     display: block;
+  }
+  .toggle {
+    display: none !important;
   }
 }
 

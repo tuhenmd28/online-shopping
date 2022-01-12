@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- animate.css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- font awesome css -->
@@ -62,17 +67,24 @@
 <nav>
     <div class="container">
         <div class="row header-nav">
-            <div class="col-lg-3">
-                <img src="img/download.webp" alt="LOGO" >
+            <div class="col-lg-3 d-flex align-items-center justify-content-between">
+                <img src="img/download.webp"  alt="LOGO" >
+                <li class="toggle"><span class="bars"></span></li>
             </div>
             <div class="col-lg-6 nav ">
                     <ul>
                         <li><a href="#" class="active">home</a></li>
                         <li><a href="#">shop</a></li>
-                        <li><a href="#">pages</a></li>
+                        <li class="pages"><a href="#">pages</a>
+                          <ul>
+                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="">Shoping Card</a></li>
+                            <li><a href="">Chack Out </a></li>
+                            <li><a href="">Blog Details</a></li>
+                        </ul>
+                        </li>
                         <li><a href="#">blog</a></li>
                         <li><a href="#">contact</a></li>
-                <li class="toggle "><span class="bars"></span></li>
                     </ul>
                 
             </div>
@@ -85,9 +97,68 @@
     </div>
 </nav>
 
+<!-- <aside>
+  <li><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
+  <li class=" header-icon">
+  <li><i class="fas fa-heart"></i><span>1</span></li>
+  <li><i class="fas fa-shopping-bag"></i><span>3</span></li>
+  <li class="d-flex"> item: <p> $150.00</p></li>
+  </li>
+  <li class="flag"><img src="img/flag.png" alt=""> English <i class="fas fa-chevron-down"></i>
+    <ul class="country ">
+        <li><a href="#">Spanis</a></li>
+        <li><a href="#">English</a></li>
+    </ul>
+</li>
+</aside> -->
+
+<section class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 ">
+        <div class="alldeparmeant">
+          <button type="button"> <i class="fas fa-bars"></i>  All departments <i class="fas fa-angle-down"></i></button>
+          <ul class="animate__slideInDown allitem">
+            <li><a href="#">Fresh Meat</a></li>
+            <li><a href="#">Vegetables</a></li>
+            <li><a href="#">Fruit & Nut Gifts</a></li>
+            <li><a href="#"> Fresh Berries</a></li>
+            <li><a href="#">  Ocean Foods</a></li>
+            <li><a href="#">Butter & Eggs</a></li>
+            <li><a href="#">Fastfood</a></li>
+            <li><a href="#">Fresh Onion</a></li>
+            <li><a href="#"> Papayaya & Crisps</a></li>
+            <li><a href="#">Oatmeal</a></li>
+            <li><a href="#">Fresh Bananas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-8 mt-5 mt-lg-0">
+        <form action="" class="d-flex search-form">
+          <div class="formTxt">All Categories<i class="fas fa-angle-down"></i></div>
+          <input type="text" placeholder="What do you need?">
+          <input type="submit" value="search" name="" id="">
+        </form>
+      </div>
+      <div class="col-lg-3 col-md-4 phoneIcon mt-5 mt-lg-0"">
+        <span><i class="fas fa-phone-alt"></i></span>
+        <div class="number">
+          <h4>+65 11.188.888</h4>
+            <p>support 24/7 time</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-
+<script>
+  let alldeparmeant = document.querySelector('.alldeparmeant button');
+  let allItem = document.querySelector('.allitem');
+  alldeparmeant.addEventListener('click',()=>{
+    allItem.classList.toggle('open')
+  })
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
