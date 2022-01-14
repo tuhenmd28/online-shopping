@@ -10,6 +10,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+   <!-- Link Swiper's CSS -->
+   <link
+   rel="stylesheet"
+   href="https://unpkg.com/swiper/swiper-bundle.min.css"
+ />
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- font awesome css -->
@@ -97,8 +102,8 @@
     </div>
 </nav>
 
-<!-- <aside>
-  <li><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
+<aside>
+  <!-- <li><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
   <li class=" header-icon">
   <li><i class="fas fa-heart"></i><span>1</span></li>
   <li><i class="fas fa-shopping-bag"></i><span>3</span></li>
@@ -110,7 +115,80 @@
         <li><a href="#">English</a></li>
     </ul>
 </li>
-</aside> -->
+<li class="login">
+  <a href="#">
+      <i class="fas fa-user"></i> Login
+  </a>
+</li> -->
+<ul class="menu">
+  <li class="logo"><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
+  <li class="email"><a href="tel:email"><i class="fas fa-envelope"></i>hello@colorlib.com
+  </a> 
+  </li>
+  <li class="free "> Free Shipping for all Order of $99</li>
+  <li class="social-icon">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-pinterest-p"></i></a>
+  </li>
+  <div class="login-flag">
+    <div class="flag">
+      <img src="img/flag.png" alt=""> English <i class="fas fa-chevron-down"></i>
+      <ul class="country ">
+        <li><a href="#">Spanis</a></li>
+        <li><a href="#">English</a></li>
+    </ul>
+    </div>
+    <li class="login">
+      <a href="#">
+          <i class="fas fa-user"></i> Login
+      </a>
+  </li>
+  </div>
+  <!-- <li class="login-and-flag d-flex align-items-center">
+    
+    <li class="flag-area">
+      <li class="flag"><img src="img/flag.png" alt=""> English <i class="fas fa-chevron-down"></i></li>
+      <ul class="country ">
+          <li><a href="#">Spanis</a></li>
+          <li><a href="#">English</a></li>
+      </ul>
+    </li>
+      <li class="login">
+        <a href="#">
+            <i class="fas fa-user"></i> Login
+        </a>
+    </li>
+  </li> -->
+  <!-- <li class="login">
+      <a href="#">
+          <i class="fas fa-user"></i> Login
+      </a>
+  </li> -->
+   <ul class="main-menu">
+      <li><a href="#">home</a></li>
+      <li><a href="#">shop</a></li>
+      <li> <label for="page"></label> 
+      <ul>
+          <li><a href="#">Shop Details</a></li>
+          <li><a href="">Shoping Card</a></li>
+          <li><a href="">Chack Out </a></li>
+          <li><a href="">Blog Details</a></li>
+      </ul>
+      </li>
+      <li><a href="#">blog</a></li>
+      <li><a href="#">contact</a></li>
+    </ul>
+
+
+  <div class=" header-icon">
+    <li><i class="fas fa-heart"></i><span>1</span></li>
+    <li><i class="fas fa-shopping-bag"></i><span>3</span></li>
+    <li class="d-flex"> item: <p> $150.00</p></li>
+</div> 
+</ul>
+</aside>
 
 <section class="search">
   <div class="container">
@@ -133,241 +211,536 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-6 col-md-8 mt-5 mt-lg-0">
-        <form action="" class="d-flex search-form">
-          <div class="formTxt">All Categories<i class="fas fa-angle-down"></i></div>
-          <input type="text" placeholder="What do you need?">
-          <input type="submit" value="search" name="" id="">
-        </form>
-      </div>
-      <div class="col-lg-3 col-md-4 phoneIcon mt-5 mt-lg-0"">
-        <span><i class="fas fa-phone-alt"></i></span>
-        <div class="number">
-          <h4>+65 11.188.888</h4>
-            <p>support 24/7 time</p>
+      <div class="col-lg-9 col-md-12 mt-5 mt-lg-0">
+        <div class="row">
+          <div class="col-md-8">
+            <form action="" class="d-flex search-form">
+              <div class="formTxt ">All Categories<i class="fas fa-angle-down"></i></div>
+              <input type="text" placeholder="What do you need?">
+              <input type="submit" value="search" name="" id="">
+            </form>
+          </div>
+        
+        <div class="col-md-4  phoneIcon mt-5 mt-md-0 align-items-start">
+          <span><i class="fas fa-phone-alt"></i></span>
+          <div class="number">
+            <h4>+65 11.188.888</h4>
+              <p>support 24/7 time</p>
+          </div>
         </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="img-div">
+              <h4>FRUIT FRESH</h4>
+                <h1>  Vegetable <br>
+                  100% Organic</h1>
+                <p> Free Pickup and Delivery Available</p>
+                <a href="#" class="btn btn-primary">shop now</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="itemSlider">
+<div class="container">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slider1 ">
+        <a href="#"> fresh fruit</a>
       </div>
+      <div class="swiper-slide slider2">
+        <a href="#"> fresh fruit</a>
+
+      </div>
+      <div class="swiper-slide slider3">
+        <a href="#"> fresh fruit</a>
+
+      </div>
+      <div class="swiper-slide slider4">
+        <a href="#"> fresh fruit</a>
+
+      </div>
+      <div class="swiper-slide slider5">
+        <a href="#"> fresh fruit</a>
+
+      </div>
+     
+    </div>
+    <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+</section>
+<!-- item filter section start -->
+<section class="filter">
+  <div class="container">
+    <div class="row my-5">
+      <div class="col-12">
+        <h1 class="heading">Featured Product</h1>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-lg-12 ">
+        <ul class="list-container">
+          <li class="list active" data-filter="all">All</li>
+          <li class="list" data-filter="oranges">Oranges</li>
+          <li class="list" data-filter="fresh-meat">Fresh Meat</li>
+          <li class="list" data-filter="vegetable">Vegetables</li>
+          <li class="list" data-filter="fastfood">Fastfood</li>
+        </ul>
+      </div>
+    </div>
+    <div class="item-wraper">
+
+        <div class="filterItem img1 oranges fresh-meat">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+
+    
+        <div class="filterItem img2 vegetable fastfood">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+      
+    
+        <div class="filterItem img3 fresh-meat vegetable">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+   
+    
+        <div class="filterItem img4 oranges vegetable fastfood">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+     
+    
+        <div class="filterItem img5 fresh-meat vegetable">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+    
+    
+        <div class="filterItem img6 oranges fastfood">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+     
+    
+        <div class="filterItem img7 fresh-meat">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+
+    
+        <div class="filterItem img8 vegetable fastfood">
+          <div class="itemtxt">
+            <h3>Crab Pool Security</h3>
+              <span>$30.00</span>
+          </div>
+            <div class="filter-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>  
+            <a href="#"><i class="fas fa-retweet"></i></a>  
+            <a href="#"><i class="fas fa-shopping-cart"></i></i></a>  
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- item filter section end -->
+
+<section class="fruit-img py-5 my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 fimg1 ">
+        <img src="img/xbanner-1.jpg.pagespeed.ic.aDN3QrExt6.webp" alt="">
+      </div>
+      <div class="col-md-6 fimg2"><img src="img/xbanner-2.jpg.pagespeed.ic.-2eeuFVLcY.webp" alt=""></div>
     </div>
   </div>
 </section>
 
 
-<script>
-  let alldeparmeant = document.querySelector('.alldeparmeant button');
-  let allItem = document.querySelector('.allitem');
-  alldeparmeant.addEventListener('click',()=>{
-    allItem.classList.toggle('open')
-  })
-</script>
+<section class="product-review">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="review-header-area">
+          <h1>Latest Products</h1>
+        </div>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
+      </div>
+      <div class="col-lg-4">
+        <div class="review-header-area">
+          <h1>
+            Top Rated Products</h1>
+          </div>
+
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="review-header-area">
+          <h1>
+            Review Products</h1>
+         </div>
+
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+<!-- from the blog section start -->
+
+<section class="from-the-blog">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="text-center">form the blog</h1>
+    </div>
+    <div class="row ">
+
+      <div class="col-md-4 fistc">
+        <img src="img/xblog-1.jpg.pagespeed.ic.b6c8D8etPg.webp" alt="">
+        <div class="imgtxt">
+          <h4><i class="far fa-calendar"></i>  may 4,2019   <span>  <i class="far fa-comment"></i> 5</span></h4>
+          <h2>Cooking tips make cooking simple</h2>
+          <p>Sed quia non numquam modi tempora indunt 
+            ut labore et dolore magnam aliquam quaerat</p>
+        </div>
+      </div>
+      <div class="col-md-4 secondc">
+        <img src="img/xblog-2.jpg.pagespeed.ic.Wv9OXwE7iA.webp" alt="">
+        <div class="imgtxt">
+          <h4><i class="far fa-calendar"></i>  may 4,2019   <span>  <i class="far fa-comment"></i> 5</span></h4>
+          <h2>Cooking tips make cooking simple</h2>
+          <p>Sed quia non numquam modi tempora indunt 
+            ut labore et dolore magnam aliquam quaerat</p>
+        </div>
+      </div>
+      <div class="col-md-4 thardc">
+        <img src="img/xblog-3.jpg.pagespeed.ic.ruf-U0Iaxk.webp" alt="">
+        <div class="imgtxt">
+          <h4><i class="far fa-calendar"></i>  may 4,2019   <span>  <i class="far fa-comment"></i> 5</span></h4>
+          <h2>Cooking tips make cooking simple</h2>
+          <p>Sed quia non numquam modi tempora indunt 
+            ut labore et dolore magnam aliquam quaerat</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- from the blog section end -->
+<!-- footer area start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-first-col">
+        <img src="img/download.webp" alt="">
+        <p>Address: 60-49 Road 11378 New York</p>
+        <p> Phone: +65 11.188.888</p>
+        <p>Email: hello@colorlib.com</p>
+      </div>
+      <div class="col-md-4 footer-second-col">
+        <h4>Useful Links</h4>
+        <div class="usefulLink">
+          <li><a href="#"> About Us</a></li>
+          <li><a href="#">About Our Shop</a></li>
+          <li><a href="#">Secure Shopping</a></li>
+          <li><a href="#">Delivery infomation</a></li>
+          <li><a href="#"> Privacy Policy</a></li>
+          <li><a href="#">Our Sitemap</a></li>
+          <li><a href="#">Who We Are</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Innovation</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </div>
+      </div>
+      <div class="col-md-4 footer-third-col">
+        <h2>Join Our Newsletter Now</h2>
+        <p>Get E-mail updates about our latest shop and special offers.</p>
+        <form action="">
+          
+            <input type="text" placeholder="Enter Your mail">
+            <button type="submit" class="footer-btn">subscribe</button>
+          
+        </form>
+        <li class="social-icon">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </li>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer area end -->
+<div class="Colorlib">
+  <div class="container">
+    <div class="contain d-flex align-items-center justify-content-between">
+      <h1>Copyright ©2022 All rights reserved | This template is made with  ❤ by <a href="#">Colorlib</a></h1>
+      <img src="img/xpayment-item.png.pagespeed.ic.IsCge16PaL.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- jQuary cdn -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+ <!-- Swiper JS -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+ <!-- main javascript -->
+ <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
 
-
-<!-- 
-<sectopm class="best-service bg-colorr">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 mx-auto">
-          <div class="fixed-text text-center">
-            <h4>Knowledge of the market</h4>
-            <h1 class="fw500">Only the best professional services</h1>
-            <p class="kire">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-12 service-tab">
-         
-  
-            <ul class="nav  mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item text-center">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#Agricultural" role="tab" aria-controls="pills-home" aria-selected="true">
-                  <span class="d-block"><i class="fas fa-tractor"></i></span>
-                  <strong class="d-block">Agricultural Loan</strong>
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#Personal" role="tab" aria-controls="pills-profile" aria-selected="false">
-                  <span class="d-block"><i class="fas fa-universal-access"></i></i></span>
-                  <strong class="d-block">Personal Loan</strong>
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#Business" role="tab" aria-controls="pills-contact" aria-selected="false">
-                  <span class="d-block"><i class="fas fa-user-tie"></i></span>
-                  <strong class="d-block">Business Loan</strong>
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#Educational" role="tab" aria-controls="pills-contact" aria-selected="false">
-                  <span class="d-block"><i class="fas fa-user-graduate"></i></span>
-                  <strong class="d-block">Educational Loan</strong>
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#House" role="tab" aria-controls="pills-contact" aria-selected="false">
-                  <span class="d-block"><i class="fas fa-laptop-house"></i></span>
-                  <strong class="d-block">House Loan</strong>
-                </a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#Payday" role="tab" aria-controls="pills-contact" aria-selected="false">
-                  <span class="d-block"><i class="fab fa-paypal"></i></span>
-                  <strong class="d-block">Payday Loan</strong>
-                </a>
-              </li>
-            </ul>
-  
-            <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="Agricultural" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="service-content">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <img src="img/services-tab.png" alt="">
-                    </div>
-                    <div class="col-lg-6 service-right">
-                      <h4>Agriculture Loans</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit molestias quis aperiam aliquam earum dolor culpa consectetur minus, minima aliquid dolore neque magni sequi ipsa officiis natus modi, error, hic atque. Rem!</p>
-                      <h4>Type of Business Loan</h4>
-                      <ul>
-                        <li>Secured loan</li>
-                        <li>Unsecured loan</li>
-                        <li> Revolving credit facilities</li>
-                        <li>Business crash advances</li>
-                      </ul>
-                      <h4>Eligibility and criteria for Education loan</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <h3>House loan guide</h3>
-                      <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="Personal" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="service-content">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <img src="img/services-tab.png" alt="">
-                    </div>
-                    <div class="col-lg-6 service-right">
-                      <h4>Personal Loans</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit molestias quis aperiam aliquam earum dolor culpa consectetur minus, minima aliquid dolore neque magni sequi ipsa officiis natus modi, error, hic atque. Rem!</p>
-                      <h4>Type of Business Loan</h4>
-                      <ul>
-                        <li>Secured loan</li>
-                        <li>Unsecured loan</li>
-                        <li> Revolving credit facilities</li>
-                        <li>Business crash advances</li>
-                      </ul>
-                      <h4>Eligibility and criteria for Education loan</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <h3>House loan guide</h3>
-                      <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="Business" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="service-content">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <img src="img/services-tab.png" alt="">
-                    </div>
-                    <div class="col-lg-6 service-right">
-                      <h4>Business Loans</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit molestias quis aperiam aliquam earum dolor culpa consectetur minus, minima aliquid dolore neque magni sequi ipsa officiis natus modi, error, hic atque. Rem!</p>
-                      <h4>Type of Business Loan</h4>
-                      <ul>
-                        <li>Secured loan</li>
-                        <li>Unsecured loan</li>
-                        <li> Revolving credit facilities</li>
-                        <li>Business crash advances</li>
-                      </ul>
-                      <h4>Eligibility and criteria for Education loan</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <h3>House loan guide</h3>
-                      <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="Educational" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="service-content">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <img src="img/services-tab.png" alt="">
-                    </div>
-                    <div class="col-lg-6 service-right">
-                      <h4>Educational Loans</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit molestias quis aperiam aliquam earum dolor culpa consectetur minus, minima aliquid dolore neque magni sequi ipsa officiis natus modi, error, hic atque. Rem!</p>
-                      <h4>Type of Business Loan</h4>
-                      <ul>
-                        <li>Secured loan</li>
-                        <li>Unsecured loan</li>
-                        <li> Revolving credit facilities</li>
-                        <li>Business crash advances</li>
-                      </ul>
-                      <h4>Eligibility and criteria for Education loan</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <h3>House loan guide</h3>
-                      <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="House" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="service-content">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <img src="img/services-tab.png" alt="">
-                    </div>
-                    <div class="col-lg-6 service-right">
-                      <h4>House Loans</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit molestias quis aperiam aliquam earum dolor culpa consectetur minus, minima aliquid dolore neque magni sequi ipsa officiis natus modi, error, hic atque. Rem!</p>
-                      <h4>Type of Business Loan</h4>
-                      <ul>
-                        <li>Secured loan</li>
-                        <li>Unsecured loan</li>
-                        <li> Revolving credit facilities</li>
-                        <li>Business crash advances</li>
-                      </ul>
-                      <h4>Eligibility and criteria for Education loan</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <h3>House loan guide</h3>
-                      <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="Payday" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="service-content">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <img src="img/services-tab.png" alt="">
-                    </div>
-                    <div class="col-lg-6 service-right">
-                      <h4>Payday Loans</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit molestias quis aperiam aliquam earum dolor culpa consectetur minus, minima aliquid dolore neque magni sequi ipsa officiis natus modi, error, hic atque. Rem!</p>
-                      <h4>Type of Business Loan</h4>
-                      <ul>
-                        <li>Secured loan</li>
-                        <li>Unsecured loan</li>
-                        <li> Revolving credit facilities</li>
-                        <li>Business crash advances</li>
-                      </ul>
-                      <h4>Eligibility and criteria for Education loan</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <h3>House loan guide</h3>
-                      <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </sectopm>
-    -->

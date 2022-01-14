@@ -1,0 +1,52 @@
+$(document).ready(function(){
+  $('.list').click(function(){
+    const value = $(this).attr('data-filter');
+    if(value == 'all'){
+      $('.filterItem').show('2000')
+    }else{
+      $('.filterItem').not('.'+value).hide('2000')
+      $('.filterItem').filter('.'+value).show('2000')
+    }
+  })
+  //active class
+  $('.list').click(function(){
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+});
+
+
+
+
+
+  var acc = document.querySelector(".alldeparmeant button");
+  acc.addEventListener("click", function() {
+    this.classList.toggle("active");
+    console.log(this);
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+
+
+  var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+
+        autoplaySpeed:3000,
+        //centeredSlides:true,
+        slidesPerView: "auto",
+        autoplay:{
+        delay:3000,
+        disableOnInteraction:false
+    },
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
