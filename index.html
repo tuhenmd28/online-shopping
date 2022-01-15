@@ -15,6 +15,8 @@
    rel="stylesheet"
    href="https://unpkg.com/swiper/swiper-bundle.min.css"
  />
+ <!-- slick slider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- font awesome css -->
@@ -140,7 +142,7 @@
 </ul>
 </aside>
 <div id="overlay" onclick="off()">
-  <aside class="aside">
+  <!-- <aside class="aside">
 
     <ul class="menu">
       <li class="logo"><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
@@ -195,8 +197,10 @@
         <li class="d-flex"> item: <p> $150.00</p></li>
     </div> 
     </ul>
-    </aside>
+    </aside> -->
 </div>
+
+<!-- scarch area third section start -->
 <section class="search">
   <div class="container">
     <div class="row">
@@ -236,7 +240,7 @@
           </div>
         </div>
         </div>
-        <div class="row mt-5 pt-5">
+        <div class="row mt-5 ">
           <div class="col-12">
             <div class="img-div">
               <h4>FRUIT FRESH</h4>
@@ -251,7 +255,9 @@
     </div>
   </div>
 </section>
+<!-- scarch area third section end -->
 
+<!-- item slider four section start -->
 <section class="itemSlider">
 <div class="container">
   <div class="swiper mySwiper">
@@ -283,7 +289,9 @@
 </div>
 
 </section>
-<!-- item filter section start -->
+<!-- item slider four section end -->
+
+<!-- item filter section five start -->
 <section class="filter">
   <div class="container">
     <div class="row my-5">
@@ -409,8 +417,9 @@
     </div>
   </div>
 </section>
-<!-- item filter section end -->
+<!-- item filter section five end -->
 
+<!-- section six start -->
 <section class="fruit-img py-5 my-5">
   <div class="container">
     <div class="row">
@@ -421,6 +430,7 @@
     </div>
   </div>
 </section>
+<!-- section six end -->
 
 
 <section class="product-review">
@@ -430,9 +440,8 @@
         <div class="review-header-area">
           <h1>Latest Products</h1>
         </div>
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+            <div class="first-slider">
+              <div class="slider_item">
                 <div class="row mt-5 pt-4">
                   <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
                   <div class="col-8"><h3>Crab Pool Security</h3>
@@ -449,7 +458,7 @@
                     <span>$30.00</span></div>
                 </div>
               </div>
-              <div class="carousel-item ">
+              <div class="slider_item">
                 <div class="row mt-5 pt-4">
                   <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
                   <div class="col-8"><h3>Crab Pool Security</h3>
@@ -466,7 +475,7 @@
                     <span>$30.00</span></div>
                 </div>
               </div>
-              <div class="carousel-item ">
+              <div class="slider_item">
                 <div class="row mt-5 pt-4">
                   <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
                   <div class="col-8"><h3>Crab Pool Security</h3>
@@ -483,158 +492,136 @@
                     <span>$30.00</span></div>
                 </div>
               </div>
+           
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+         
+          
         
       </div>
-      <div class="col-lg-4 col-md-6  mb-lg-0 mb-5 pb-5 pb-lg-0">
+      <div class="col-lg-4 col-md-6 mb-lg-0 mb-5 pb-5 pb-lg-0">
         <div class="review-header-area">
-          <h1>
-            Top Rated Products</h1>
-          </div>
-
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row mt-5 pt-4">
-                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row">
-                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-              </div>
-              <div class="carousel-item ">
-                <div class="row mt-5 pt-4">
-                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row">
-                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-              </div>
-              <div class="carousel-item ">
-                <div class="row mt-5 pt-4">
-                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row">
-                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="review-header-area">
-          <h1>
-            Review Products</h1>
-         </div>
-
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row mt-5 pt-4">
-                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row">
-                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-              </div>
-              <div class="carousel-item ">
-                <div class="row mt-5 pt-4">
-                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row">
-                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-              </div>
-              <div class="carousel-item ">
-                <div class="row mt-5 pt-4">
-                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row my-4">
-                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-                <div class="row">
-                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
-                  <div class="col-8"><h3>Crab Pool Security</h3>
-                    <span>$30.00</span></div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+          <h1>Top Rated Products</h1>
         </div>
+            <div class="second-slider">
+              <div class="slider_item">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="slider_item">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="slider_item">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+           
+            </div>
+         
+          
+        
+      </div>
+      <div class="col-lg-4 col-md-6 ">
+        <div class="review-header-area">
+          <h1>Review Products</h1>
+        </div>
+            <div class="third-slider">
+              <div class="slider_item">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="slider_item">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+              <div class="slider_item">
+                <div class="row mt-5 pt-4">
+                  <div class="col-4"><img src="img/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-4"><img src="img/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><img src="img/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" class="w-100 img-fluid" alt=""></div>
+                  <div class="col-8"><h3>Crab Pool Security</h3>
+                    <span>$30.00</span></div>
+                </div>
+              </div>
+           
+            </div>
+         
+          
+        
+      </div>
       </div>
     </div>
 </section>
@@ -744,10 +731,37 @@
   crossorigin="anonymous"></script>
  <!-- Swiper JS -->
  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+<!-- slick slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <!-- main javascript -->
  <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+       $('.first-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow:'<span class="next_arow"><i class="fas fa-chevron-left"></i></span>',
+        nextArrow:'<span class="prev_arow"><i class="fas fa-chevron-right"></i></span>',
+      });
+       $('.second-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow:'<span class="next_arow"><i class="fas fa-chevron-left"></i></span>',
+        nextArrow:'<span class="prev_arow"><i class="fas fa-chevron-right"></i></span>',
+      });
+       $('.third-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow:'<span class="next_arow"><i class="fas fa-chevron-left"></i></span>',
+        nextArrow:'<span class="prev_arow"><i class="fas fa-chevron-right"></i></span>',
+      });
+    </script>
 </body>
 </html>
 

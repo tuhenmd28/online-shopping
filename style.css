@@ -334,10 +334,18 @@ ol, ul, li, p, h1, h2, h3, h4 {
   cursor: pointer;
 }
 
+.aside .menu .aside-menu-area .manu-wraper label i.active {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .aside .menu .aside-menu-area .manu-wraper label i {
   float: right;
   padding-right: 1rem;
-  padding-top: .4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .aside .menu .aside-menu-area .manu-wraper label:hover {
@@ -1197,38 +1205,41 @@ header .menu .login i {
   font-weight: 700;
 }
 
-.product-review #carouselExampleControls .carousel-control-next, .product-review #carouselExampleControls .carousel-control-prev {
-  position: absolute;
-  top: -24px;
-  bottom: unset;
-  z-index: 1;
-  display: unset;
-  -webkit-box-align: initial;
-      -ms-flex-align: initial;
-          align-items: initial;
-  -webkit-box-pack: initial;
-      -ms-flex-pack: initial;
-          justify-content: initial;
-  width: 15%;
-  padding: 0;
-  color: #fff;
+.product-review .first-slider {
+  position: relative;
+}
+
+.product-review .first-slider .prev_arow {
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
   text-align: center;
-  background: 0 0;
-  border: 0;
-  opacity: .5;
-  -webkit-transition: opacity .15s ease;
-  transition: opacity .15s ease;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  top: -29px;
 }
 
-.product-review #carouselExampleControls .carousel-control-next span, .product-review #carouselExampleControls .carousel-control-prev span {
-  background-color: red;
+.product-review .first-slider .next_arow {
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  top: -29px;
 }
 
-.product-review #carouselExampleControls .carousel-control-prev {
-  right: 10% !important;
-}
-
-.product-review #carouselExampleControls .carousel-item h3 {
+.product-review .first-slider .slider_item h3 {
   font-size: 1.6rem;
   font-family: "Cairo", sans-serif;
   color: #252525;
@@ -1236,7 +1247,119 @@ header .menu .login i {
   padding-bottom: .7rem;
 }
 
-.product-review #carouselExampleControls .carousel-item span {
+.product-review .first-slider .slider_item span {
+  font-size: 1.8rem;
+  font-family: "Cairo", sans-serif;
+  color: #1c1c1c;
+  font-weight: 900;
+}
+
+.product-review .review-header-area h1 {
+  font-size: 2.5rem;
+  font-family: "Cairo", sans-serif;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.product-review .second-slider {
+  position: relative;
+}
+
+.product-review .second-slider .prev_arow {
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  top: -29px;
+}
+
+.product-review .second-slider .next_arow {
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  top: -29px;
+}
+
+.product-review .second-slider .slider_item h3 {
+  font-size: 1.6rem;
+  font-family: "Cairo", sans-serif;
+  color: #252525;
+  padding-top: 1.3rem;
+  padding-bottom: .7rem;
+}
+
+.product-review .second-slider .slider_item span {
+  font-size: 1.8rem;
+  font-family: "Cairo", sans-serif;
+  color: #1c1c1c;
+  font-weight: 900;
+}
+
+.product-review .review-header-area h1 {
+  font-size: 2.5rem;
+  font-family: "Cairo", sans-serif;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.product-review .third-slider {
+  position: relative;
+}
+
+.product-review .third-slider .prev_arow {
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  top: -29px;
+}
+
+.product-review .third-slider .next_arow {
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  top: -29px;
+}
+
+.product-review .third-slider .slider_item h3 {
+  font-size: 1.6rem;
+  font-family: "Cairo", sans-serif;
+  color: #252525;
+  padding-top: 1.3rem;
+  padding-bottom: .7rem;
+}
+
+.product-review .third-slider .slider_item span {
   font-size: 1.8rem;
   font-family: "Cairo", sans-serif;
   color: #1c1c1c;
@@ -1483,6 +1606,26 @@ footer .footer-third-col .social-icon a i:hover {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .item-wraper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .item-wraper .filterItem {
+    height: 360px;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 0 200px !important;
+            flex: 1 0 200px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .header-icon {
     -webkit-box-ordinal-group: 5;
@@ -1577,6 +1720,46 @@ footer .footer-third-col .social-icon a i:hover {
   }
   .list-container .list.active {
     border-bottom: 3px solid #7FAD39;
+  }
+  .item-wraper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .item-wraper .filterItem {
+    height: 360px;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 0 220px !important;
+            flex: 1 0 220px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+  }
+  .itemtxt {
+    position: absolute;
+    bottom: 5% !important;
+    left: 12%;
+    text-align: center;
+    display: block;
+    width: 76% !important;
+    -webkit-box-shadow: 0 0 1rem .3rem #00000015;
+            box-shadow: 0 0 1rem .3rem #00000015;
+    z-index: 11 !important;
+    background: #fff;
+  }
+  .itemtxt h3 {
+    font-family: "Cairo", sans-serif;
+    color: #252525;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+  .itemtxt span {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-top: .5rem !important;
   }
 }
 

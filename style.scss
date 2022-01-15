@@ -295,10 +295,14 @@ ol,ul,li,p,h1,h2,h3,h4{
                     font-weight: 700;
                     transition: all .5s;
                     cursor: pointer;
+                    i.active{
+                        transform: rotate(0);
+                        transition: all .5s;
+                    }
                     i{
                         float: right;
                         padding-right: 1rem;
-                        padding-top: .4rem;
+                        transform: rotate(-90deg);
                     }
                     &:hover{
                         background: rgb(246, 246, 246);
@@ -882,7 +886,6 @@ header{
             flex: 1 0 230px;
             object-fit: cover;
             position: relative;
-            // transition: transform .6s ease-in-out ;
             &:hover .filter-icon a {
                 transform: translateY(-40px);
                 opacity: 1;
@@ -986,31 +989,154 @@ header{
             font-weight: 700;
         }
     }
-    #carouselExampleControls{
-        .carousel-control-next, .carousel-control-prev {
-            position: absolute;
-            top: -24px;
-             bottom:unset;
-            z-index: 1;
-             display:unset; 
-             align-items: initial; 
-             justify-content: initial; 
-             width: 15%; 
-             padding: 0; 
-            color: #fff;
-             text-align: center; 
-             background: 0 0; 
-            border: 0;
-            opacity: .5;
-            transition: opacity .15s ease;
+    .first-slider{
+        position: relative;
+     .prev_arow{
+    color: white;
+    background: red;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right:0%;
+    top: -29px;
+     }
+     .next_arow{
+    color: white;
+    background: red;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right:10%;
+    top: -29px;
+     }
+        
+        .slider_item{
+            h3{
+                font-size: 1.6rem;
+                font-family: $fontf;
+                color: #252525;
+                padding-top: 1.3rem;
+                padding-bottom: .7rem;
+            }
             span{
-                background-color: red ;
+                font-size: 1.8rem;
+                font-family: $fontf;
+                color: $headertxtc;
+                font-weight: 900;
+    
             }
         }
-        .carousel-control-prev {
-            right: 10% !important;
+    }
+} 
+.product-review{
+    .review-header-area{
+        h1{
+            font-size: 2.5rem;
+            font-family: $fontf;
+            color: $headertxtc;
+            font-weight: 700;
         }
-        .carousel-item{
+    }
+    .second-slider{
+        position: relative;
+     .prev_arow{
+    color: white;
+    background: red;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right:0%;
+    top: -29px;
+     }
+     .next_arow{
+    color: white;
+    background: red;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right:10%;
+    top: -29px;
+     }
+        
+        .slider_item{
+            h3{
+                font-size: 1.6rem;
+                font-family: $fontf;
+                color: #252525;
+                padding-top: 1.3rem;
+                padding-bottom: .7rem;
+            }
+            span{
+                font-size: 1.8rem;
+                font-family: $fontf;
+                color: $headertxtc;
+                font-weight: 900;
+    
+            }
+        }
+    }
+} 
+.product-review{
+    .review-header-area{
+        h1{
+            font-size: 2.5rem;
+            font-family: $fontf;
+            color: $headertxtc;
+            font-weight: 700;
+        }
+    }
+    .third-slider{
+        position: relative;
+     .prev_arow{
+    color: white;
+    background: red;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right:0%;
+    top: -29px;
+     }
+     .next_arow{
+    color: white;
+    background: red;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right:10%;
+    top: -29px;
+     }
+        
+        .slider_item{
             h3{
                 font-size: 1.6rem;
                 font-family: $fontf;
@@ -1218,6 +1344,20 @@ footer{
     }
     
 }
+@media screen and (max-width:1199px){
+    .item-wraper{
+        display: flex;
+        // width: 100%;
+        gap: 2rem;
+        flex-wrap: wrap;
+        .filterItem{
+            height: 360px;
+            flex: 1 0 200px !important;
+            object-fit: cover;
+            position: relative;
+        }
+    }
+}
 @media screen and (max-width:991px){
     .header-icon{
         order: 4;
@@ -1312,7 +1452,41 @@ footer{
             border-bottom: 3px solid $textc;
         }
     }
+    .item-wraper{
+        display: flex;
+        // width: 100%;
+        gap: 2rem;
+        flex-wrap: wrap;
+        .filterItem{
+            height: 360px;
+            flex: 1 0 220px !important;
+            object-fit: cover;
+            position: relative;
+        }
+    }
      
+    .itemtxt{
+        position: absolute;
+        bottom: 5% !important;
+        left: 12%;
+        text-align: center;
+        display: block;
+        width: 76% !important;
+        box-shadow: 0 0 1rem .3rem #00000015;
+        z-index: 11 !important;
+        background: #fff;
+        h3{
+            font-family: $fontf;
+            color: #252525;
+            font-size: 1.6rem;
+            padding: 1rem 0;
+        }
+        span{
+            font-weight: 900;
+            font-size: 1.8rem;
+            margin-top: .5rem !important;
+        }
+    }
 }
 
 

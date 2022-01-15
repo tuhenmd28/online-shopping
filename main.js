@@ -29,10 +29,11 @@ $(document).ready(function(){
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
   });
-
+  let i = document.querySelector('.manu-wraper label i');
   var acc = document.querySelector(".manu-wraper label");
   acc.addEventListener("click", function() {
     this.classList.toggle("active");
+    i.classList.toggle('active');
     console.log(this);
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -75,13 +76,9 @@ $(document).ready(function(){
         },
       });
 
-      // let toggle = document.getElementById('toggle');
        let aside = document.querySelector('.aside')
 
-      // toggle.addEventListener("click",()=>{
-       
-      //   aside.classList.toggle('active');
-      // })
+  
 
 
       function on() {
@@ -94,3 +91,5 @@ $(document).ready(function(){
         aside.classList.remove('active');
 
       }
+
+     
