@@ -47,25 +47,6 @@
                         <i class="fas fa-user"></i> Login
                     </a>
                 </li>
-                <!-- <li class="main-menu">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">shop</a></li>
-                    <li> <label for="page"></label> 
-                    <ul>
-                        <li><a href="#">Shop Details</a></li>
-                        <li><a href="">Shoping Card</a></li>
-                        <li><a href="">Chack Out </a></li>
-                        <li><a href="">Blog Details</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">contact</a></li>
-                </li>
-                <li class="lovIcone">
-                    <span><i class="fas fa-heart"></i></span>
-                    <span><i class="fas fa-shopping-bag"></i></span>
-                    <span> item: $150.00</span>
-                </li> -->
             </ul>
         </div>
     </header>
@@ -74,7 +55,7 @@
         <div class="row header-nav">
             <div class="col-lg-3 d-flex align-items-center justify-content-between">
                 <img src="img/download.webp"  alt="LOGO" >
-                <li class="toggle"><span class="bars"></span></li>
+                <li id="toggle" onclick="on()"><span class="bars"></span></li>
             </div>
             <div class="col-lg-6 nav ">
                     <ul>
@@ -102,24 +83,8 @@
     </div>
 </nav>
 
-<aside>
-  <!-- <li><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
-  <li class=" header-icon">
-  <li><i class="fas fa-heart"></i><span>1</span></li>
-  <li><i class="fas fa-shopping-bag"></i><span>3</span></li>
-  <li class="d-flex"> item: <p> $150.00</p></li>
-  </li>
-  <li class="flag"><img src="img/flag.png" alt=""> English <i class="fas fa-chevron-down"></i>
-    <ul class="country ">
-        <li><a href="#">Spanis</a></li>
-        <li><a href="#">English</a></li>
-    </ul>
-</li>
-<li class="login">
-  <a href="#">
-      <i class="fas fa-user"></i> Login
-  </a>
-</li> -->
+<aside class="aside">
+
 <ul class="menu">
   <li class="logo"><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
   <li class="email"><a href="tel:email"><i class="fas fa-envelope"></i>hello@colorlib.com
@@ -146,31 +111,14 @@
       </a>
   </li>
   </div>
-  <!-- <li class="login-and-flag d-flex align-items-center">
-    
-    <li class="flag-area">
-      <li class="flag"><img src="img/flag.png" alt=""> English <i class="fas fa-chevron-down"></i></li>
-      <ul class="country ">
-          <li><a href="#">Spanis</a></li>
-          <li><a href="#">English</a></li>
-      </ul>
-    </li>
-      <li class="login">
-        <a href="#">
-            <i class="fas fa-user"></i> Login
-        </a>
-    </li>
-  </li> -->
-  <!-- <li class="login">
-      <a href="#">
-          <i class="fas fa-user"></i> Login
-      </a>
-  </li> -->
    <div class="aside-menu-area">
-     <ul>menu <li class="toggle"><span> </span></li></ul>
-      <li><a href="#">home</a></li>
-      <li><a href="#">shop</a></li>
-      <li> <label for="page"></label> 
+     <ul class="toggle-area">   <li>menu</li>
+       <li class="toggle"><span class="bars"></span></li>
+     </ul>
+     <ul class="manu-wraper">
+        <li><a href="#">home</a></li>
+        <li><a href="#">shop</a></li>
+      <li> <label for="page">pages <i class="fas fa-caret-down"></i></label> 
       <ul>
           <li><a href="#">Shop Details</a></li>
           <li><a href="">Shoping Card</a></li>
@@ -180,6 +128,7 @@
       </li>
       <li><a href="#">blog</a></li>
       <li><a href="#">contact</a></li>
+      </ul>
     </div>
 
 
@@ -190,7 +139,64 @@
 </div> 
 </ul>
 </aside>
+<div id="overlay" onclick="off()">
+  <aside class="aside">
 
+    <ul class="menu">
+      <li class="logo"><a href="#"><img src="img/download.webp"  alt="LOGO" ></a></li>
+      <li class="email"><a href="tel:email"><i class="fas fa-envelope"></i>hello@colorlib.com
+      </a> 
+      </li>
+      <li class="free "> Free Shipping for all Order of $99</li>
+      <li class="social-icon">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </li>
+      <div class="login-flag">
+        <div class="flag">
+          <img src="img/flag.png" alt=""> English <i class="fas fa-chevron-down"></i>
+          <ul class="country ">
+            <li><a href="#">Spanis</a></li>
+            <li><a href="#">English</a></li>
+        </ul>
+        </div>
+        <li class="login">
+          <a href="#">
+              <i class="fas fa-user"></i> Login
+          </a>
+      </li>
+      </div>
+       <div class="aside-menu-area">
+         <ul class="toggle-area">   <li>menu</li>
+           <li class="toggle"><span class="bars"></span></li>
+         </ul>
+         <ul class="manu-wraper">
+            <li><a href="#">home</a></li>
+            <li><a href="#">shop</a></li>
+          <li> <label for="page">pages <i class="fas fa-caret-down"></i></label> 
+          <ul>
+              <li><a href="#">Shop Details</a></li>
+              <li><a href="">Shoping Card</a></li>
+              <li><a href="">Chack Out </a></li>
+              <li><a href="">Blog Details</a></li>
+          </ul>
+          </li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+    
+    
+      <div class=" header-icon">
+        <li><i class="fas fa-heart"></i><span>1</span></li>
+        <li><i class="fas fa-shopping-bag"></i><span>3</span></li>
+        <li class="d-flex"> item: <p> $150.00</p></li>
+    </div> 
+    </ul>
+    </aside>
+</div>
 <section class="search">
   <div class="container">
     <div class="row">
@@ -222,7 +228,7 @@
             </form>
           </div>
         
-        <div class="col-md-4  phoneIcon mt-5 mt-md-0 align-items-start">
+        <div class="col-md-4  phoneIcon mt-5 mt-md-0 align-items-start justify-content-md-center">
           <span><i class="fas fa-phone-alt"></i></span>
           <div class="number">
             <h4>+65 11.188.888</h4>
@@ -230,7 +236,7 @@
           </div>
         </div>
         </div>
-        <div class="row">
+        <div class="row mt-5 pt-5">
           <div class="col-12">
             <div class="img-div">
               <h4>FRUIT FRESH</h4>
@@ -408,7 +414,7 @@
 <section class="fruit-img py-5 my-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 fimg1 ">
+      <div class="col-md-6 mb-5 mb-md-0 fimg1 ">
         <img src="img/xbanner-1.jpg.pagespeed.ic.aDN3QrExt6.webp" alt="">
       </div>
       <div class="col-md-6 fimg2"><img src="img/xbanner-2.jpg.pagespeed.ic.-2eeuFVLcY.webp" alt=""></div>
@@ -420,7 +426,7 @@
 <section class="product-review">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6 mb-lg-0 mb-5 pb-5 pb-lg-0">
         <div class="review-header-area">
           <h1>Latest Products</h1>
         </div>
@@ -489,7 +495,7 @@
           </div>
         
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6  mb-lg-0 mb-5 pb-5 pb-lg-0">
         <div class="review-header-area">
           <h1>
             Top Rated Products</h1>
@@ -559,7 +565,7 @@
             </button>
           </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="review-header-area">
           <h1>
             Review Products</h1>

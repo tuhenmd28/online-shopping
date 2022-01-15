@@ -68,13 +68,27 @@ ol,ul,li,p,h1,h2,h3,h4{
         }
 }
 //side area style
-aside{
+.aside.active{
+    left:0;
+    transition:all .6s;
+}
+.aside{
     width: 300px;
-    background: $textc;
+    background:$white;
     padding-left: 3rem;
+    position: absolute;
+    top:0;
+    left:-320px;
+    z-index: 99999;
+    height: 100%;
+    box-shadow: 1rem 1rem 1rem .2rem rgba(0, 0, 0, 0.167);
+    transition:all .7s;
     .menu{
         display: flex;
         flex-direction: column;
+        li.logo {
+            padding: 5rem 0 3rem 0;
+        }
         .login{
             padding-left:0;
             font-size: 1.5rem;
@@ -89,10 +103,6 @@ aside{
         }
         .email{
             order: 11;
-            // position: relative;
-            // &::after{
-            //   @include afterboder(70%,1px ,17% ,0% ,#b4b2b2)
-            // }
             a{
                 font-size: 1.4rem;
                 text-decoration: none;
@@ -112,13 +122,16 @@ aside{
         order: 10;
         padding-right:1.8rem;
         position: relative;
-        &::after{
-            @include afterboder(70%,1px ,17% ,0%,#b4b2b2 )
-          }
+        padding: 0 0 2rem 0;
         a{
             color: $headertxtc;
-            font-size: 1.5rem;
+            font-size: 2rem;
             padding: .7rem;
+            width: 4rem;
+            display:inline-block;
+            height:4rem;
+            text-align: center;
+           // line-height: 4rem;
             border-radius: 50%;
             transition: all .5s;
             &:hover{
@@ -192,21 +205,112 @@ aside{
 
         .aside-menu-area{
             order: 9;
-            background: red;
-            li{
-                list-style: none;
-                a{
+            background: rgb(3, 3, 3);
+            border-radius:5px;
+            margin: 2rem 0;
+            width:85%;
+            .toggle-area{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color:$white;
+                width: 100%;
+                padding: .6rem;
+                background: #000;
+                border-radius: 5px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                .toggle{
+                    width:4rem ;
+                    height: 4rem;
+                    border: unset !important;
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    padding-left: 1rem;
+                    span.bars {
+                        width: 3rem;
+                        height: 3px;
+                        background: red;
+                        position: relative;
+                        &::after,&::before{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width:3rem;
+                            background: red;
+                            height: 3px;
+                        }
+                        &::after{
+                            transform:translateY(-1rem);
+                        }
+                        &::before{
+                            transform: translateY(1rem);
+                        }
+                
+                    }
+                }
+            }
+            .manu-wraper{
+                background: black;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .4s ease-in-out;
+                li{
+                    list-style: none;
+                    ul{
+                        background: black;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height .4s ease-in-out;
+                    }
+                    a{
+                        font-size: 1.7rem;
+                        color: $textc;
+                        display: block;
+                        padding: .5rem 0 .5rem 1rem;
+                        color:white;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all .5s;
+                        font-weight: 700;
+                        font-family: $fontf;
+                        &:hover{
+                            background: rgb(246, 246, 246);
+                            border-radius: 1rem;
+                            padding-left: 2rem;
+                            color:$textc;
+                        }
+                        
+                    }
+                }
+                label{
                     font-size: 1.7rem;
                     color: $textc;
                     display: block;
-                    padding: .4rem 0;
+                    padding: .5rem 0 .5rem 1rem;
                     color:white;
-                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    transition: all .5s;
+                    cursor: pointer;
+                    i{
+                        float: right;
+                        padding-right: 1rem;
+                        padding-top: .4rem;
+                    }
+                    &:hover{
+                        background: rgb(246, 246, 246);
+                        border-radius: 1rem;
+                        padding-left: 2rem;
+                        color:$textc;
+                    }
                 }
             }
-            //label{}
         }
         .header-icon{
+            padding: 1rem 0 2rem 0;
             display: flex;
             font-size: 1.4rem;
             align-items: center;
@@ -339,7 +443,7 @@ header{
         }
     }
 }
-.toggle{
+#toggle{
     width:4rem ;
     height: 4rem;
     border: 1px solid red;
@@ -775,7 +879,7 @@ header{
         flex-wrap: wrap;
         .filterItem{
             height: 360px;
-            flex: 1 0 263px;
+            flex: 1 0 230px;
             object-fit: cover;
             position: relative;
             // transition: transform .6s ease-in-out ;
@@ -1109,7 +1213,7 @@ footer{
             display: block;
         }
     }
-    .toggle{
+    #toggle{
         display: none !important;
     }
     
@@ -1127,5 +1231,101 @@ footer{
         }
     }
    
+    .Colorlib{
+        padding: 3rem 0;
+        .contain {
+
+            h1{
+                font-size: 1.4rem;
+                color: #6F6F6F;
+                font-family: $fontf;
+                a{
+                    text-decoration: none;
+                    &:hover{
+                        color: $textc;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .fruit-img{
+        padding-bottom:7rem !important;
+        .fimg1{
+            img{
+                width: 100%;
+                margin-right: 0  !important;
+            }
+        }
+        .fimg2{
+            img{
+                width: 100%;
+                margin-left: 0  !important;
+            }
+        }
+    }
+    .Colorlib{
+        padding: 3rem 0;
+        .contain {
+            display: unset !important;
+            text-align: center;
+            h1{
+                width:100%;
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:575px){
+    .formTxt{
+        display: none;
+    }
+    .search-form{
+        input[type=text]{
+            width:70%;
+        }
+        input[type=submit]{
+            width:30%;
+        }
+    }
+    .img-div{
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+}
+@media screen and (max-width:450px){
+    .list-container{
+        display: flex;
+        justify-content:unset !important;
+        align-items: unset !important;
+        .list{
+            font-size: 1.8rem;
+            margin:0 .8rem;
+            font-family: $fontf;
+            color: $headertxtc;
+            cursor: pointer;
+        }
+        .list.active{
+            border-bottom: 3px solid $textc;
+        }
+    }
+     
 }
 
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }

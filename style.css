@@ -20,13 +20,28 @@ ol, ul, li, p, h1, h2, h3, h4 {
   padding: 0;
 }
 
-aside {
-  width: 300px;
-  background: #7FAD39;
-  padding-left: 3rem;
+.aside.active {
+  left: 0;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
-aside .menu {
+.aside {
+  width: 300px;
+  background: #FFFFFF;
+  padding-left: 3rem;
+  position: absolute;
+  top: 0;
+  left: -320px;
+  z-index: 99999;
+  height: 100%;
+  -webkit-box-shadow: 1rem 1rem 1rem 0.2rem rgba(0, 0, 0, 0.167);
+          box-shadow: 1rem 1rem 1rem 0.2rem rgba(0, 0, 0, 0.167);
+  -webkit-transition: all .7s;
+  transition: all .7s;
+}
+
+.aside .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,39 +51,43 @@ aside .menu {
           flex-direction: column;
 }
 
-aside .menu .login {
+.aside .menu li.logo {
+  padding: 5rem 0 3rem 0;
+}
+
+.aside .menu .login {
   padding-left: 0;
   font-size: 1.5rem;
   text-transform: capitalize;
 }
 
-aside .menu .login a {
+.aside .menu .login a {
   text-decoration: none;
   color: #1c1c1c;
 }
 
-aside .menu .login i {
+.aside .menu .login i {
   padding-right: .5rem;
 }
 
-aside .menu .email {
+.aside .menu .email {
   -webkit-box-ordinal-group: 12;
       -ms-flex-order: 11;
           order: 11;
 }
 
-aside .menu .email a {
+.aside .menu .email a {
   font-size: 1.4rem;
   text-decoration: none;
   padding-right: 0;
   color: #1c1c1c;
 }
 
-aside .menu .email a i {
+.aside .menu .email a i {
   padding-right: 1rem;
 }
 
-aside .menu .free {
+.aside .menu .free {
   -webkit-box-ordinal-group: 13;
       -ms-flex-order: 12;
           order: 12;
@@ -76,39 +95,34 @@ aside .menu .free {
   padding-left: 0rem;
 }
 
-aside .menu .social-icon {
+.aside .menu .social-icon {
   -webkit-box-ordinal-group: 11;
       -ms-flex-order: 10;
           order: 10;
   padding-right: 1.8rem;
   position: relative;
+  padding: 0 0 2rem 0;
 }
 
-aside .menu .social-icon::after {
-  content: "";
-  position: absolute;
-  height: 70%;
-  right: 0%;
-  top: 17%;
-  width: 1px;
-  background: #b4b2b2;
-}
-
-aside .menu .social-icon a {
+.aside .menu .social-icon a {
   color: #1c1c1c;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: .7rem;
+  width: 4rem;
+  display: inline-block;
+  height: 4rem;
+  text-align: center;
   border-radius: 50%;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-aside .menu .social-icon a:hover {
+.aside .menu .social-icon a:hover {
   color: #FFFFFF;
   background: red;
 }
 
-aside .menu .login-flag {
+.aside .menu .login-flag {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
@@ -117,18 +131,18 @@ aside .menu .login-flag {
   display: flex;
 }
 
-aside .menu .login-flag .flag {
+.aside .menu .login-flag .flag {
   position: relative;
   font-size: 1.6rem;
 }
 
-aside .menu .login-flag .flag:hover > .country {
+.aside .menu .login-flag .flag:hover > .country {
   top: 90%;
   opacity: 1;
   visibility: visible;
 }
 
-aside .menu .login-flag .flag .country {
+.aside .menu .login-flag .flag .country {
   position: absolute;
   background: black;
   width: 80px;
@@ -142,11 +156,11 @@ aside .menu .login-flag .flag .country {
   visibility: hidden;
 }
 
-aside .menu .login-flag .flag .country li {
+.aside .menu .login-flag .flag .country li {
   list-style: none;
 }
 
-aside .menu .login-flag .flag .country li a {
+.aside .menu .login-flag .flag .country li a {
   font-family: "Cairo", sans-serif;
   color: #FFFFFF;
   font-size: 1.4rem;
@@ -159,19 +173,19 @@ aside .menu .login-flag .flag .country li a {
   font-weight: bold;
 }
 
-aside .menu .login-flag .flag .country li a:hover {
+.aside .menu .login-flag .flag .country li a:hover {
   background-color: #FFFFFF;
   color: #7FAD39;
 }
 
-aside .menu .login-flag .login {
+.aside .menu .login-flag .login {
   padding-left: 2rem;
   font-size: 1.5rem;
   text-transform: capitalize;
   position: relative;
 }
 
-aside .menu .login-flag .login::after {
+.aside .menu .login-flag .login::after {
   content: "";
   position: absolute;
   height: 70%;
@@ -181,40 +195,160 @@ aside .menu .login-flag .login::after {
   background: #b4b2b2;
 }
 
-aside .menu .login-flag .login a {
+.aside .menu .login-flag .login a {
   text-decoration: none;
   color: #1c1c1c;
 }
 
-aside .menu .login-flag .login i {
+.aside .menu .login-flag .login i {
   padding-right: .5rem;
 }
 
-aside .menu .flag:hover.country {
+.aside .menu .flag:hover.country {
   top: 0% !important;
 }
 
-aside .menu .aside-menu-area {
+.aside .menu .aside-menu-area {
   -webkit-box-ordinal-group: 10;
       -ms-flex-order: 9;
           order: 9;
-  background: red;
+  background: #030303;
+  border-radius: 5px;
+  margin: 2rem 0;
+  width: 85%;
 }
 
-aside .menu .aside-menu-area li {
+.aside .menu .aside-menu-area .toggle-area {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 100%;
+  padding: .6rem;
+  background: #000;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aside .menu .aside-menu-area .toggle-area .toggle {
+  width: 4rem;
+  height: 4rem;
+  border: unset !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding-left: 1rem;
+}
+
+.aside .menu .aside-menu-area .toggle-area .toggle span.bars {
+  width: 3rem;
+  height: 3px;
+  background: red;
+  position: relative;
+}
+
+.aside .menu .aside-menu-area .toggle-area .toggle span.bars::after, .aside .menu .aside-menu-area .toggle-area .toggle span.bars::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3rem;
+  background: red;
+  height: 3px;
+}
+
+.aside .menu .aside-menu-area .toggle-area .toggle span.bars::after {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.aside .menu .aside-menu-area .toggle-area .toggle span.bars::before {
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
+.aside .menu .aside-menu-area .manu-wraper {
+  background: black;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .4s ease-in-out;
+  transition: max-height .4s ease-in-out;
+}
+
+.aside .menu .aside-menu-area .manu-wraper li {
   list-style: none;
 }
 
-aside .menu .aside-menu-area li a {
+.aside .menu .aside-menu-area .manu-wraper li ul {
+  background: black;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .4s ease-in-out;
+  transition: max-height .4s ease-in-out;
+}
+
+.aside .menu .aside-menu-area .manu-wraper li a {
   font-size: 1.7rem;
   color: #7FAD39;
   display: block;
-  padding: .4rem 0;
+  padding: .5rem 0 .5rem 1rem;
   color: white;
   text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font-weight: 700;
+  font-family: "Cairo", sans-serif;
 }
 
-aside .menu .header-icon {
+.aside .menu .aside-menu-area .manu-wraper li a:hover {
+  background: #f6f6f6;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  color: #7FAD39;
+}
+
+.aside .menu .aside-menu-area .manu-wraper label {
+  font-size: 1.7rem;
+  color: #7FAD39;
+  display: block;
+  padding: .5rem 0 .5rem 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.aside .menu .aside-menu-area .manu-wraper label i {
+  float: right;
+  padding-right: 1rem;
+  padding-top: .4rem;
+}
+
+.aside .menu .aside-menu-area .manu-wraper label:hover {
+  background: #f6f6f6;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  color: #7FAD39;
+}
+
+.aside .menu .header-icon {
+  padding: 1rem 0 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,17 +359,17 @@ aside .menu .header-icon {
   gap: 2rem;
 }
 
-aside .menu .header-icon li {
+.aside .menu .header-icon li {
   position: relative;
 }
 
-aside .menu .header-icon li p {
+.aside .menu .header-icon li p {
   color: #252525;
   font-weight: 900;
   padding-left: .4rem;
 }
 
-aside .menu .header-icon li span {
+.aside .menu .header-icon li span {
   position: absolute;
   display: -ms-grid;
   display: grid;
@@ -251,7 +385,7 @@ aside .menu .header-icon li span {
   font-weight: 700;
 }
 
-aside .menu .header-icon li i {
+.aside .menu .header-icon li i {
   font-size: 1.8rem;
 }
 
@@ -391,7 +525,7 @@ header .menu .login i {
   padding-right: .5rem;
 }
 
-.toggle {
+#toggle {
   width: 4rem;
   height: 4rem;
   border: 1px solid red;
@@ -407,14 +541,14 @@ header .menu .login i {
   cursor: pointer;
 }
 
-.toggle span.bars {
+#toggle span.bars {
   width: 3rem;
   height: 3px;
   background: red;
   position: relative;
 }
 
-.toggle span.bars::after, .toggle span.bars::before {
+#toggle span.bars::after, #toggle span.bars::before {
   content: "";
   display: block;
   position: absolute;
@@ -423,12 +557,12 @@ header .menu .login i {
   height: 3px;
 }
 
-.toggle span.bars::after {
+#toggle span.bars::after {
   -webkit-transform: translateY(-1rem);
           transform: translateY(-1rem);
 }
 
-.toggle span.bars::before {
+#toggle span.bars::before {
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
 }
@@ -946,8 +1080,8 @@ header .menu .login i {
 .filter .item-wraper .filterItem {
   height: 360px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 263px;
-          flex: 1 0 263px;
+      -ms-flex: 1 0 230px;
+          flex: 1 0 230px;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
@@ -1344,7 +1478,7 @@ footer .footer-third-col .social-icon a i:hover {
   .header-nav .nav {
     display: block;
   }
-  .toggle {
+  #toggle {
     display: none !important;
   }
 }
@@ -1365,5 +1499,105 @@ footer .footer-third-col .social-icon a i:hover {
         -ms-flex: 1;
             flex: 1;
   }
+  .Colorlib {
+    padding: 3rem 0;
+  }
+  .Colorlib .contain h1 {
+    font-size: 1.4rem;
+    color: #6F6F6F;
+    font-family: "Cairo", sans-serif;
+  }
+  .Colorlib .contain h1 a {
+    text-decoration: none;
+  }
+  .Colorlib .contain h1 a:hover {
+    color: #7FAD39;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fruit-img {
+    padding-bottom: 7rem !important;
+  }
+  .fruit-img .fimg1 img {
+    width: 100%;
+    margin-right: 0  !important;
+  }
+  .fruit-img .fimg2 img {
+    width: 100%;
+    margin-left: 0  !important;
+  }
+  .Colorlib {
+    padding: 3rem 0;
+  }
+  .Colorlib .contain {
+    display: unset !important;
+    text-align: center;
+  }
+  .Colorlib .contain h1 {
+    width: 100%;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .formTxt {
+    display: none;
+  }
+  .search-form input[type=text] {
+    width: 70%;
+  }
+  .search-form input[type=submit] {
+    width: 30%;
+  }
+  .img-div h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .list-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+    -webkit-box-align: unset !important;
+        -ms-flex-align: unset !important;
+            align-items: unset !important;
+  }
+  .list-container .list {
+    font-size: 1.8rem;
+    margin: 0 .8rem;
+    font-family: "Cairo", sans-serif;
+    color: #1c1c1c;
+    cursor: pointer;
+  }
+  .list-container .list.active {
+    border-bottom: 3px solid #7FAD39;
+  }
+}
+
+#overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,6 +30,30 @@ $(document).ready(function(){
     } 
   });
 
+  var acc = document.querySelector(".manu-wraper label");
+  acc.addEventListener("click", function() {
+    this.classList.toggle("active");
+    console.log(this);
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+
+  var acc = document.querySelector(".toggle-area");
+  acc.addEventListener("click", function() {
+    this.classList.toggle("active");
+    console.log(this);
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+
 
   var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
@@ -50,3 +74,23 @@ $(document).ready(function(){
           prevEl: ".swiper-button-prev",
         },
       });
+
+      // let toggle = document.getElementById('toggle');
+       let aside = document.querySelector('.aside')
+
+      // toggle.addEventListener("click",()=>{
+       
+      //   aside.classList.toggle('active');
+      // })
+
+
+      function on() {
+        document.getElementById("overlay").style.display = "block";
+        aside.classList.add('active');
+      }
+      
+      function off() {
+        document.getElementById("overlay").style.display = "none";
+        aside.classList.remove('active');
+
+      }
