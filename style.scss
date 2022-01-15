@@ -130,50 +130,53 @@ aside{
   .login-flag{
       order: 5;
       display: flex;
-      position: relative;
-      &:hover>.country{
-          top:190%;
-        //   opacity: 1;
-        //   visibility: visible;
+      .flag{
+        position: relative;
+        font-size: 1.6rem;
+        &:hover>.country{
+            top:90%;
+             opacity: 1;
+             visibility: visible;
+        }
+        .country{
+            position: absolute;
+            background: black;
+            width: 80px;
+            text-align: center;
+            left: 0;
+            top:190%;
+            border-radius: 4px;
+            transition: all .5s;
+            opacity: 0;
+            visibility: hidden;
+            li{
+                list-style: none;
+                a{
+                    font-family: $fontf;
+                    color: $white;
+                    font-size: 1.4rem;
+                    text-decoration: none;
+                    display: block;
+                    padding: .4rem 0;
+                    border-radius: 5px;
+                    transition: all .5s;
+                    font-weight: bold;
+                    &:hover{
+                        background-color: $white;
+                        color: $textc;
+                    }
+                }
+            }
+        }
       }
-      .country{
-          position: absolute;
-          background: black;
-          width: 80px;
-          text-align: center;
-          left: 0;
-          top:90%;
-          border-radius: 4px;
-          transition: all .5s;
-          opacity: 1;
-        //   visibility: hidden;
-          li{
-              list-style: none;
-              a{
-                  font-family: $fontf;
-                  color: $white;
-                  font-size: 1.4rem;
-                  text-decoration: none;
-                  display: block;
-                  padding: .4rem 0;
-                  border-radius: 5px;
-                  transition: all .5s;
-                  font-weight: bold;
-                  &:hover{
-                      background-color: $white;
-                      color: $textc;
-                  }
-              }
-          }
-      }
-  }
-  .flag:hover.country{
-      top: 0% !important;
-  }
-    .login{
+      .login{
         padding-left: 2rem;
         font-size: 1.5rem;
         text-transform: capitalize;
+        position: relative;
+            &::after{
+              @include afterboder(70%,1px ,17% ,80% ,#b4b2b2)
+            }
         a{
             text-decoration: none;
             color: $headertxtc;
@@ -182,8 +185,25 @@ aside{
             padding-right: .5rem;
         }
     }
-        .main-menu{
+  }
+  .flag:hover.country{
+      top: 0% !important;
+  }
+
+        .aside-menu-area{
             order: 9;
+            background: red;
+            li{
+                list-style: none;
+                a{
+                    font-size: 1.7rem;
+                    color: $textc;
+                    display: block;
+                    padding: .4rem 0;
+                    color:white;
+                    text-decoration: none;
+                }
+            }
             //label{}
         }
         .header-icon{

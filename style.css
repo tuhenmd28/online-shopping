@@ -115,31 +115,38 @@ aside .menu .login-flag {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+aside .menu .login-flag .flag {
   position: relative;
+  font-size: 1.6rem;
 }
 
-aside .menu .login-flag:hover > .country {
-  top: 190%;
+aside .menu .login-flag .flag:hover > .country {
+  top: 90%;
+  opacity: 1;
+  visibility: visible;
 }
 
-aside .menu .login-flag .country {
+aside .menu .login-flag .flag .country {
   position: absolute;
   background: black;
   width: 80px;
   text-align: center;
   left: 0;
-  top: 90%;
+  top: 190%;
   border-radius: 4px;
   -webkit-transition: all .5s;
   transition: all .5s;
-  opacity: 1;
+  opacity: 0;
+  visibility: hidden;
 }
 
-aside .menu .login-flag .country li {
+aside .menu .login-flag .flag .country li {
   list-style: none;
 }
 
-aside .menu .login-flag .country li a {
+aside .menu .login-flag .flag .country li a {
   font-family: "Cairo", sans-serif;
   color: #FFFFFF;
   font-size: 1.4rem;
@@ -152,34 +159,59 @@ aside .menu .login-flag .country li a {
   font-weight: bold;
 }
 
-aside .menu .login-flag .country li a:hover {
+aside .menu .login-flag .flag .country li a:hover {
   background-color: #FFFFFF;
   color: #7FAD39;
+}
+
+aside .menu .login-flag .login {
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: relative;
+}
+
+aside .menu .login-flag .login::after {
+  content: "";
+  position: absolute;
+  height: 70%;
+  right: 80%;
+  top: 17%;
+  width: 1px;
+  background: #b4b2b2;
+}
+
+aside .menu .login-flag .login a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+aside .menu .login-flag .login i {
+  padding-right: .5rem;
 }
 
 aside .menu .flag:hover.country {
   top: 0% !important;
 }
 
-aside .menu .login {
-  padding-left: 2rem;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-
-aside .menu .login a {
-  text-decoration: none;
-  color: #1c1c1c;
-}
-
-aside .menu .login i {
-  padding-right: .5rem;
-}
-
-aside .menu .main-menu {
+aside .menu .aside-menu-area {
   -webkit-box-ordinal-group: 10;
       -ms-flex-order: 9;
           order: 9;
+  background: red;
+}
+
+aside .menu .aside-menu-area li {
+  list-style: none;
+}
+
+aside .menu .aside-menu-area li a {
+  font-size: 1.7rem;
+  color: #7FAD39;
+  display: block;
+  padding: .4rem 0;
+  color: white;
+  text-decoration: none;
 }
 
 aside .menu .header-icon {
